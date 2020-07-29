@@ -11,6 +11,7 @@
         },
         "vm_name": {
             "type": "string",
+            "defaultValue": "stream-vm",
             "metadata": {
                 "description": "Local name for the VM can be whatever you want"
             }
@@ -74,6 +75,7 @@
         },
         "bastion-host-name": {
             "type": "string",
+            "defaultValue": "AzureBastionHost",
             "metadata": {
                 "description": "Name of Azure Bastion resource"
             }
