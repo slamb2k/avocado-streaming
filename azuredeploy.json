@@ -267,7 +267,7 @@
                 "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetwork_name'))]"
             ],
             "properties": {
-                "addressPrefix": "parameters('bastion-subnet-ip-prefix')",
+                "addressPrefix": "parameters('worker-subnet-ip-prefix')",
                 "privateEndpointNetworkPolicies": "Enabled",
                 "privateLinkServiceNetworkPolicies": "Enabled"
             }
@@ -296,14 +296,14 @@
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                        "parameters('bastion-subnet-ip-prefix')"
+                        "parameters('virtualNetwork_ip_prefix')"
                     ]
                 },
                 "subnets": [
                     {
                         "name": "default",
                         "properties": {
-                            "addressPrefix": "parameters('bastion-subnet-ip-prefix')",
+                            "addressPrefix": "parameters('worker-subnet-ip-prefix')",
                             "privateEndpointNetworkPolicies": "Enabled",
                             "privateLinkServiceNetworkPolicies": "Enabled"
                         }
