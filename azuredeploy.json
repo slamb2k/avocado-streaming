@@ -123,7 +123,14 @@
             "metadata": {
                 "description": "List of Chocolatey packages to install separated by a semi-colon eg. linqpad;sysinternals"
             }
-        }
+        },
+        "scenesLocation": {
+            "type": "string",
+            "defaultValue": "https://raw.githubusercontent.com/slamb2k/avocado-streaming/master/",
+            "metadata": {
+                "description": "Public uri location of da place where scenes is at."
+            }
+        }        
     },
     "variables": {
         "vmImagePublisher": "MicrosoftWindowsDesktop",
@@ -493,7 +500,7 @@
                     "fileUris": [
                         "[variables('setupScriptLocation')]"
                     ],
-                    "commandToExecute": "[concat('powershell -ExecutionPolicy bypass -File ', variables('scriptFolder'), '/',parameters('setupChocolateyScriptFileName'),' -chocoPackages ',parameters('chocoPackages'))]"
+                    "commandToExecute": "[concat('powershell -ExecutionPolicy bypass -File ', variables('scriptFolder'), '/',parameters('setupChocolateyScriptFileName'),' -chocoPackages ',parameters('chocoPackages'),' -scenesLocation ',parameters('scenesLocation'))]"
                 },
                 "protectedSettings": {
                 }
