@@ -285,7 +285,7 @@
                 "privateLinkServiceNetworkPolicies": "Enabled",
                 "networkSecurityGroup": {
                     "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('worker_nsg_name'))]"
-                }                   
+                }
             }
         },
         {
@@ -301,7 +301,7 @@
                 "privateLinkServiceNetworkPolicies": "Enabled",
                 "networkSecurityGroup": {
                     "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsg-name'))]"
-                }                
+                }
             }
         },
         {
@@ -429,7 +429,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "worker_vmSize": "[parameters('worker_vmSize')]"
+                    "vmSize": "[parameters('worker_vmSize')]"
                 },
                 "storageProfile": {
                     "imageReference": {
@@ -447,8 +447,8 @@
                 },
                 "osProfile": {
                     "computerName": "[parameters('worker_vm_name')]",
-                    "worker_vm_adminUsername": "[parameters('worker_vm_adminUsername')]",
-                    "worker_vm_adminPassword": "[parameters('worker_vm_adminPassword')]"
+                    "adminUsername": "[parameters('worker_vm_adminUsername')]",
+                    "adminPassword": "[parameters('worker_vm_adminPassword')]"
                 },
                 "networkProfile": {
                     "networkInterfaces": [
