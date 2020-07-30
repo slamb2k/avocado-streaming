@@ -1,29 +1,23 @@
-# OBS Studio on Windows 10 GPU VM with Skype, NDI Runtime and OBS-NDI installed
-
-![Azure Public Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/obs-studio-stream-vm-chocolatey/PublicLastTestDate.svg)
-![Azure Public Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/obs-studio-stream-vm-chocolatey/PublicDeployment.svg)
-
-![Azure US Gov Last Test Date](https://azurequickstartsservice.blob.core.windows.net/badges/obs-studio-stream-vm-chocolatey/FairfaxLastTestDate.svg)
-![Azure US Gov Last Test Result](https://azurequickstartsservice.blob.core.windows.net/badges/obs-studio-stream-vm-chocolatey/FairfaxDeployment.svg)
+# OBS Studio on Windows 10 GPU VM with Skype, NDI Runtime and OBS-NDI installed - [Azure Bastion Managed]
 
 ![Best Practice Check](https://azurequickstartsservice.blob.core.windows.net/badges/obs-studio-stream-vm-chocolatey/BestPracticeResult.svg)
 ![Cred Scan Check](https://azurequickstartsservice.blob.core.windows.net/badges/obs-studio-stream-vm-chocolatey/CredScanResult.svg)
-
-
 
 [![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fslamb2k%2Favocado-streaming%2Fmaster%2Fazuredeploy.json)  [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fslamb2k%2Favocado-streaming%2Fmaster%2Fazuredeploy.json)
 
 `Tags: Azure, Virtual Machine, OBS, OBS Studio, Streaming VM`
 
 ## Solution overview and deployed resources
-This template deploys a Windows GPU VM (Windows 10) with OBS Studio, and Skype Preinstalled. 
+This template deploys a Windows GPU VM (Windows 10) with OBS Studio, and Skype Preinstalled. All management of the Streaming VM will be facilitated by Azure Bastion.
 
 Following resources will be created
 - Virtual Network
-- Public IP Adress with DNS
+- Public IP Address with DNS
 - Network Interface
-- Network Security group (with RDP port opened)
+- Network Security group (with HTTP and SSL port opened)
 - Virtual Machine
+- Azure Bastion
+- Public IP Address with DNS
 
 Notes
 - GPU drivers installed via NVIDIA extension for Virtual Machine, more details - https://docs.microsoft.com/en-us/azure/virtual-machines/windows/n-series-driver-setup
